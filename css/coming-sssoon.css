@@ -663,6 +663,8 @@ h1 small, h2 small, h3 small, h1 .small, h2 .small, h3 .small {
 
 .main{
     background-position: center center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
     background-size: cover;
     height: auto;
     left: 0;
