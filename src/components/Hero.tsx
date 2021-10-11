@@ -26,8 +26,8 @@ const IconBox: React.FC<IconBoxData> = ({iconClass, title, link, description}) =
 }
 
 const Hero: React.FC<{
-    titleLine1: string, titleLine2: string, centerButton: ButtonData, boxesData: IconBoxData[]
-}> = ({titleLine1, titleLine2, boxesData,centerButton}) => {
+    titleLine1: string, titleLine2: string, centerButton?: ButtonData, boxesData: IconBoxData[]
+}> = ({titleLine1, titleLine2, boxesData,centerButton= {title: "About us", link: "#about"}}) => {
     return (
         <section id="hero" className="d-flex align-items-center">
             <div className="container position-relative" data-aos="fade-up" data-aos-delay="100">

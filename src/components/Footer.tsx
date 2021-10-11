@@ -1,9 +1,15 @@
 import {ButtonData} from './Hero'
+import React from "react";
 
 interface SocialLinkData {
     link: string,
     className: string,
     iconClassName: string
+}
+
+interface LinksCollection {
+    title: string,
+    links: ButtonData[]
 }
 
 export function SocialLink(data: SocialLinkData) {
@@ -12,25 +18,30 @@ export function SocialLink(data: SocialLinkData) {
     )
 }
 
-export function FooterSubLink(data: ButtonData) {
+const FooterSubLink: React.FC<ButtonData> = ({link, title}) => {
     return (
-        <li><i className="bx bx-chevron-right"/> <a href={data.link}>{data.title}</a></li>
+        <li><i className="bx bx-chevron-right"/> <a href={link}>{title}</a></li>
     )
 }
 
-export function FooterLinksCollection(title: string, data: ButtonData[]) {
+const FooterLinksCollection: React.FC<{ title: string, data: ButtonData[] }> = ({title, data}) => {
     return (
         <div className="col-lg-2 col-md-6 footer-links">
             <h4>{title}</h4>
             <ul>
-                {data.map((data) => FooterSubLink(data))}
+                {data.map((data) => {
+                    return <FooterSubLink {...data}/>
+                })}
             </ul>
         </div>
     )
 }
 
 // todo: complete footer
-export default function Footer(socialLinks: SocialLinkData[]) {
+const Footer: React.FC<{ socialLinks: SocialLinkData[], linksCollection: LinksCollection[] }> = ({
+                                                                                                     socialLinks,
+                                                                                                     linksCollection
+                                                                                                 }) => {
     return (
         <footer id="footer">
             <div className="footer-top">
@@ -45,27 +56,10 @@ export default function Footer(socialLinks: SocialLinkData[]) {
                             </p>
                         </div>
 
-                        <div className="col-lg-2 col-md-6 footer-links">
-                            <h4>Useful Links</h4>
-                            <ul>
-                                <li><i className="bx bx-chevron-right"/> <a href="#">Home</a></li>
-                                <li><i className="bx bx-chevron-right"/> <a href="#">About us</a></li>
-                                <li><i className="bx bx-chevron-right"/> <a href="#">Services</a></li>
-                                <li><i className="bx bx-chevron-right"/> <a href="#">Terms of service</a></li>
-                                <li><i className="bx bx-chevron-right"/> <a href="#">Privacy policy</a></li>
-                            </ul>
-                        </div>
+                        {linksCollection.map((collection) => {
+                            return <FooterLinksCollection title={collection.title} data={collection.links}/>
+                        })}
 
-                        <div className="col-lg-3 col-md-6 footer-links">
-                            <h4>Our Services</h4>
-                            <ul>
-                                <li><i className="bx bx-chevron-right"/> <a href="#">Web Design</a></li>
-                                <li><i className="bx bx-chevron-right"/> <a href="#">Web Development</a></li>
-                                <li><i className="bx bx-chevron-right"/> <a href="#">Product Management</a></li>
-                                <li><i className="bx bx-chevron-right"/> <a href="#">Marketing</a></li>
-                                <li><i className="bx bx-chevron-right"/> <a href="#">Graphic Design</a></li>
-                            </ul>
-                        </div>
 
                         {/*<div className="col-lg-4 col-md-6 footer-newsletter">*/}
                         {/*    <h4>Join Our Newsletter</h4>*/}
@@ -96,3 +90,5 @@ export default function Footer(socialLinks: SocialLinkData[]) {
         </footer>
     )
 }
+
+export default Footer

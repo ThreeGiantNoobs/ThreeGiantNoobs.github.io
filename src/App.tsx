@@ -13,24 +13,36 @@ function App() {
     return (
         <>
             <Header title="TGN" navLinks={navLinks}/>
-            <Hero titleLine1="The ThreeGiantNoobs" titleLine2="We do some cool stuff" boxesData={
+            <Hero titleLine1="We are ThreeGiantNoobs" titleLine2="We do some cool stuff" boxesData={
                 [
                     {
-                        "link": "#",
-                        "title": "OSME",
-                        "description": "A Chrome extension that proves to be handy tool when your exams are held on the Moodle platform 😉",
-                        "iconClass": "ri-service-fill"
+                        link: "https://osme.thetgnteam.com",
+                        title: "OSME",
+                        description: "A Chrome extension that proves to be handy tool when your exams are held on the Moodle platform 😉",
+                        iconClass: "ri-service-fill"
                     },
                     {
-                        "link": "#",
-                        "title": "Waddup Casuals",
-                        "description": "A Discord bot which sends articles using RSS. Different from others, One of its kind, pass the topic and it will automatically sends best articles",
-                        "iconClass": "ri-discord-fill"
+                        link: "https://waddup.thetgnteam.com",
+                        title: "Waddup Casuals",
+                        description: "A Discord bot which sends articles using RSS. Different from others, One of its kind, pass the topic and it will automatically sends best articles",
+                        iconClass: "ri-discord-fill"
+                    },
+                    {
+                        link: "https://github.com/ThreeGiantNoobs/chegg-scraper",
+                        title: "Chegg Scraper",
+                        description: "An Open Source Project for scraping the Chegg answers for Personal use.",
+                        iconClass: "ri-book-mark-fill"
+                    },
+                    {
+                        link: "#",
+                        title: "Benlotus MovieBox",
+                        description: "Video Sharing Native Android app.",
+                        iconClass: "ri-android-fill"
                     },
                 ]
-            } centerButton={{"title": "Get started", "link": "#hero"}}/>
+            }/>
             <Main />
-            {Footer([])}
+            <Footer socialLinks={[]} linksCollection={[]}/>
         </>
     );
 }
