@@ -3,6 +3,8 @@ import {ServiceCardInterface, serviceCardsShape, ServiceInterface} from "./compo
 import {Icons} from "./components/Icons";
 import {TeamInterface, UserProfileInterface} from "./components/mainSections/Team";
 
+export let adminEmail: string = "admin@thetgnteam.com"
+
 export let navLinks: NavLinkInterface[] = [
     {link: "#hero", heading: "Home", active: true},
     {link: "#about", heading: "About", active: false},
@@ -14,7 +16,7 @@ let ServiceCardData: ServiceCardInterface[] = [
         cardShape: serviceCardsShape.shape1,
         title: "Discord Bot",
         description: "Get your own custom bot for your discord server",
-        link: "mailto:wbot16700@gmail.com?subject=Hi%2C%20I%20am%20interested%20in%20discord%20bot",
+        link: `mailto:${adminEmail}?subject=Hi%2C%20I%20am%20interested%20in%20discord%20bot`,
         iconClass: Icons.discord_fill,
         color: "red"
     },
@@ -22,7 +24,7 @@ let ServiceCardData: ServiceCardInterface[] = [
         cardShape: serviceCardsShape.shape3,
         title: "Api",
         description: "Get your Api for automation or your database",
-        link: "mailto:wbot16700@gmail.com?subject=Hi%2C%20I%20am%20interested%20in%20Custom%20Api",
+        link: `mailto:${adminEmail}?subject=Hi%2C%20I%20am%20interested%20in%20Custom%20Api`,
         iconClass: Icons.server,
         color: "blue"
     }

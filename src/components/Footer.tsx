@@ -37,11 +37,14 @@ const FooterLinksCollection: React.FC<{ title: string, data: ButtonData[] }> = (
     )
 }
 
+export interface FooterInterface {
+    email: string
+    socialLinks: SocialLinkData[],
+    linksCollection: LinksCollection[]
+}
+
 // todo: complete footer
-const Footer: React.FC<{ socialLinks: SocialLinkData[], linksCollection: LinksCollection[] }> = ({
-                                                                                                     socialLinks,
-                                                                                                     linksCollection
-                                                                                                 }) => {
+const Footer: React.FC<FooterInterface> = ({socialLinks, linksCollection, email}) => {
     return (
         <footer id="footer">
             <div className="footer-top">
@@ -52,7 +55,7 @@ const Footer: React.FC<{ socialLinks: SocialLinkData[], linksCollection: LinksCo
                             <h3>TGN</h3>
                             <p>
                                 ThreeGiantNoobs<br/><br/>
-                                <strong>Email:</strong> wbot16700@gmail.com<br/>
+                                <strong>Email:</strong> {email}<br/>
                             </p>
                         </div>
 

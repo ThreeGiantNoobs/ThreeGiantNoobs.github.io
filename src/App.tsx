@@ -3,7 +3,7 @@ import Header from "./components/Header";
 import Hero from "./components/Hero";
 import Footer from "./components/Footer";
 import Main from "./components/Main";
-import {navLinks, ServicesData, TeamData} from "./Data";
+import {adminEmail, navLinks, ServicesData, TeamData} from "./Data";
 
 
 function App() {
@@ -39,7 +39,7 @@ function App() {
                 ]
             }/>
             <Main servicesData={ServicesData} userProfileData={TeamData} />
-            <Footer socialLinks={[]} linksCollection={[]}/>
+            <Footer socialLinks={[]} linksCollection={[]} email={adminEmail}/>
         </>
     );
 }
