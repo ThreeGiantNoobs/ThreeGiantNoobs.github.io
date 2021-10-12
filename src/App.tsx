@@ -3,11 +3,8 @@ import Header from "./components/Header";
 import Hero from "./components/Hero";
 import Footer from "./components/Footer";
 import Main from "./components/Main";
+import {navLinks, ServicesData, TeamData} from "./Data";
 
-let navLinks = [
-    {"link": "#hero", "heading": "Home", "active": true},
-    {"link": "#about", "heading": "About", "active": false},
-]
 
 function App() {
     return (
@@ -41,7 +38,7 @@ function App() {
                     },
                 ]
             }/>
-            <Main />
+            <Main servicesData={ServicesData} userProfileData={TeamData} />
             <Footer socialLinks={[]} linksCollection={[]}/>
         </>
     );

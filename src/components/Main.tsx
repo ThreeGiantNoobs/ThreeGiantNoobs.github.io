@@ -1,10 +1,19 @@
 import About from "./mainSections/About";
 import React from "react";
+import {TeamInterface} from "./mainSections/Team";
+import Services, {ServiceInterface} from "./mainSections/Services";
 
-const Main: React.FC = () => {
+export interface MainInterface {
+    servicesData: ServiceInterface,
+    userProfileData: TeamInterface
+}
+
+const Main: React.FC<MainInterface> = ({servicesData, userProfileData}) => {
     return (
         <main id="main">
-            <About />
+            <About/>
+            <Services {...servicesData} />
+            {/*<Team {...userProfileData} />*/}
         </main>
     )
 }
