@@ -19,7 +19,7 @@ const Header: React.FC<{ title: string, navLinks: NavLinkInterface[] }> = ({titl
             <div className="container d-flex align-items-center justify-content-between">
                 <a href="/" className="logo">
                     <h1 className="logo">
-                        <img className="tgnlogo" src={"android-chrome-192x192.png"}/>
+                        <img className="tgnlogo" src={"/android-chrome-192x192.png"}/>
                         {" " + title}
                     </h1>
                 </a>

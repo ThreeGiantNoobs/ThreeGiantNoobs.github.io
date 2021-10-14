@@ -52,9 +52,11 @@ const Footer: React.FC<FooterInterface> = ({socialLinks, linksCollection, email}
                     <div className="row">
 
                         <div className="col-lg-3 col-md-6 footer-contact">
-                            <h1><img src={"tgn.png"}></h1>
+                            <h3>
+                                <img className="tgnlogo logo" style={{height: "100px"}} src={"/tgn.png"}/>
+                            </h3>
                             <p>
-                                <br/><br/><br/>
+                                <br/><br/>
                                 <strong>Email:</strong> {email}<br/>
                             </p>
                         </div>
