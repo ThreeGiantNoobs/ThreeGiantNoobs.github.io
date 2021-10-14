@@ -8,6 +8,18 @@
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
+.tgnlogo {
+  width: auto;
+  /*height: 40px;*/
+  object-fit: cover;
+}
+
+.none-textDecoration:link {
+  text-decoration: inherit;
+  color: inherit;
+  cursor: auto;
+}
+
 body {
   font-family: "Open Sans", sans-serif;
   color: #444444;

@@ -13,16 +13,22 @@ const NavLink: React.FC<NavLinkInterface> = ({link, heading, active}) => {
     )
 }
 
-const Header: React.FC<{title: string, navLinks: NavLinkInterface[]}> = ({title, navLinks}) => {
+const Header: React.FC<{ title: string, navLinks: NavLinkInterface[] }> = ({title, navLinks}) => {
     return (
         <header id="header" className="fixed-top">
             <div className="container d-flex align-items-center justify-content-between">
-
-                <h1 className="logo"><a href="/">{title}</a></h1>
+                <a href="/" className="logo">
+                    <h1 className="logo">
+                        <img className="tgnlogo" src={"android-chrome-192x192.png"}/>
+                        {" " + title}
+                    </h1>
+                </a>
 
                 <nav id="navbar" className="navbar">
                     <ul>
-                        {navLinks.map((navLink) => {return <NavLink {...navLink} />})}
+                        {navLinks.map((navLink) => {
+                            return <NavLink {...navLink} />
+                        })}
                         {/*todo: add dropdowns*/}
                     </ul>
                     <i className="bi bi-list mobile-nav-toggle"/>
