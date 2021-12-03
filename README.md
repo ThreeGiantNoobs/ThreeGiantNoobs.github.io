@@ -1,4 +1,4 @@
-## Website for [TheTgnTeam.com](https://threegiantnoobs.com)
+## Website for [TheTgnTeam.com](https://thetgnteam.com)
 
 ## Available Scripts
 In the project directory, you can run:
