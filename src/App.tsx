@@ -13,12 +13,6 @@ function App() {
             <Hero titleLine1="We are ThreeGiantNoobs" titleLine2="We do some cool stuff" boxesData={
                 [
                     {
-                        link: "https://osme.thetgnteam.com",
-                        title: "OSME",
-                        description: "A Chrome extension that proves to be handy tool when your exams are held on the Moodle platform 😉",
-                        iconClass: "ri-service-fill"
-                    },
-                    {
                         link: "https://waddup.thetgnteam.com",
                         title: "Waddup Casuals",
                         description: "A Discord bot which sends articles using RSS. Different from others, One of its kind, pass the topic and it will automatically sends best articles",
